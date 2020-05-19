@@ -23,7 +23,23 @@ class List extends React.Component {
     description: settings.defaultListDescription,
   };
 
-  render() {
+  addColumn(title){
+    this.setState(state => (
+      {
+        columns: [
+          ...state.columns,
+          {
+            key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
+            title,
+            icon: 'list-alt',
+            cards: []
+          }
+        ]
+      }
+    ));
+  }
+
+  render(props) {
     return (
       <section className={styles.component}>
         <Hero titleText={this.props.title} imageSrc={this.props.image} />
