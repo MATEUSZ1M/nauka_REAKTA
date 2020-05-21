@@ -1,11 +1,11 @@
-import React from "react";
-import styles from "./List.scss";
-import Hero from "../Hero/Hero.js";
-import Creator from "../Creator/Creator.js"
-import Column from "../Column/Column.js";
-import PropTypes from "prop-types";
-import { settings } from "../../data/dataStore";
-import ReactHtmlParser from "react-html-parser";
+import React from 'react';
+import styles from './List.scss';
+import Hero from '../Hero/Hero.js';
+import Creator from '../Creator/Creator.js';
+import Column from '../Column/Column.js';
+import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
   state = {
@@ -23,23 +23,23 @@ class List extends React.Component {
     description: settings.defaultListDescription,
   };
 
-  addColumn(title){
-    this.setState(state => (
-      {
-        columns: [
-          ...state.columns,
-          {
-            key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
-            title,
-            icon: 'list-alt',
-            cards: []
-          }
-        ]
-      }
-    ));
+  addColumn(title) {
+    this.setState((state) => ({
+      columns: [
+        ...state.columns,
+        {
+          key: state.columns.length
+            ? state.columns[state.columns.length - 1].key + 1
+            : 0,
+          title,
+          icon: 'list-alt',
+          cards: [],
+        },
+      ],
+    }));
   }
 
-  render(props) {
+  render() {
     return (
       <section className={styles.component}>
         <Hero titleText={this.props.title} imageSrc={this.props.image} />

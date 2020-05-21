@@ -16,6 +16,12 @@
   "lint-staged": {
     "src/**/*.js": "eslint"
   },
+  "prettier":{
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -46,11 +52,5 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1"
-  },
-  "Prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": false
   }
 }
