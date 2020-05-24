@@ -1,7 +1,9 @@
 @import '../../styles/settings.scss';
 
 .component {
-  padding: $base-size;
+  padding: ($base-size * 3);
+  width: 80%;
+  margin: 0 auto;
 }
 
 .title {
@@ -20,5 +22,5 @@
 }
 
 .title + .subtitle {
-  margin-top: (- $base-size * 3);
+  margin-top: (-$base-size * 3);
 }
