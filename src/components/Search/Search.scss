@@ -1,8 +1,13 @@
 @import '../../styles/settings.scss';
 
 .component {
-  width: 100%;
+  flex-shrink: 0;
+  width: calc(33% - 12px);
+  color: $color-dark;
   display: flex;
+  margin: auto;
+  justify-content: space-around;
+
 
   input {
     flex-grow: 1;
@@ -12,5 +17,13 @@
     margin: 0 0 $base-size 0;
     font-family: $font-text;
     border-radius: $radius;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .component {
+    width: 100%;
   }
 }
