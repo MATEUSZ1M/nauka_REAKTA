@@ -1,0 +1,22 @@
+@import '../../styles/settings.scss';
+
+.component {
+    background: $color-light;
+    border-radius: $radius;
+    color: $color-dark;
+    padding: ($base-size * 6);
+    letter-spacing: 3px;
+}
+.logo {
+    font-size: 24px;
+  }
+  
+.list{
+    font-size: ($base-size * 2);
+    list-style: none;
+
+
+    li{
+        padding-top: 5px;
+    }
+}
