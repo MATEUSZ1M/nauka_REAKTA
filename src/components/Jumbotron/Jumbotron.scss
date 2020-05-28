@@ -5,18 +5,9 @@
     border-radius: $radius;
     color: $color-dark;
     padding: ($base-size * 6);
-    letter-spacing: 3px;
-}
-.logo {
-    font-size: 24px;
-  }
-  
-.list{
-    font-size: ($base-size * 2);
-    list-style: none;
+    letter-spacing: 2px;
 
-
-    li{
-        padding-top: 5px;
+    p{
+        font-size: ($base-size * 1.3);
     }
 }

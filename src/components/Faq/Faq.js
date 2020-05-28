@@ -3,7 +3,8 @@ import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
 import { faqData } from '../../data/dataStore';
 import PropTypes from 'prop-types';
-import FaqList from '../FaqList/FaqList';
+import Jumbotron from '../Jumbotron/Jumbotron';
+import styles from './Faq.scss';
 
 class Faq extends React.Component {
   static propTypes = {
@@ -16,7 +17,18 @@ class Faq extends React.Component {
       <div>
         <Container>
           <Hero titleText={faqData.title} image={faqData.image} />
-          <FaqList />
+          <Jumbotron>
+            <h3 className={styles.logo}>Common questions:</h3>
+            <ul className={styles.list}>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+              <li>Lorem ipsum?</li>
+            </ul>
+          </Jumbotron>
         </Container>
       </div>
     );
