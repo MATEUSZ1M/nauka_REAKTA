@@ -86,34 +86,47 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
-    description: 'Interesting things I want to check out!',
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    title: 'Books',
+    description: 'Interesting Books I want to check out!',
+    image: 'https://i.postimg.cc/0QBsH38W/Background-18.png',
   },
+  {
+    id: 'list-2',
+    title: 'Movies',
+    description: 'Interesting Movies I want to check out!',
+    image: 'https://i.postimg.cc/0QBsH38W/Background-18.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Games',
+    description: 'Interesting Games I want to check out!',
+    image: 'https://i.postimg.cc/0QBsH38W/Background-18.png',
+  },
+
 ];
 
 const columns = [
   {
     id: 'column-1',
     listId: 'list-1',
-    title: 'Books',
+    title: 'Daires',
     icon: 'book',
   },
   {
     id: 'column-2',
-    listId: 'list-1',
-    title: 'Movies',
+    listId: 'list-2',
+    title: 'Action',
     icon: 'film',
   },
   {
     id: 'column-3',
-    listId: 'list-1',
-    title: 'Games',
+    listId: 'list-3',
+    title: 'Rpg',
     icon: 'gamepad',
   },
   {
     id: 'column-4',
-    listId: 'list-2',
+    listId: 'list-4',
     title: 'Strange column',
     icon: 'question',
   },
@@ -133,7 +146,7 @@ const cards = [
   {
     id: 'card-3',
     columnId: 'column-2',
-    title: 'Harry Potter',
+    title: '101 Dalatynian',
   },
   {
     id: 'card-4',
