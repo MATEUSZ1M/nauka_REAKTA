@@ -5,6 +5,7 @@ import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon';
+import { withRouter } from 'react-router';
 
 class Search extends React.Component {
   static propTypes = {
@@ -13,6 +14,7 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
+    history: PropTypes.node,
   };
 
   static defaultProps = {
@@ -31,7 +33,8 @@ class Search extends React.Component {
   }
 
   handleOK() {
-    this.props.changeSearchString(this.state.value);
+    // this.props.changeSearchString(this.state.value);
+    this.props.history.push(`/search/${this.state.value}`);
   }
 
   componentDidUpdate(prevProps) {
@@ -45,7 +48,7 @@ class Search extends React.Component {
     const { value } = this.state;
     const { icon } = settings.search;
     return (
-      //to do 
+      //to do
       <section>
         <Container>
           <div className={styles.component}>
@@ -70,4 +73,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);

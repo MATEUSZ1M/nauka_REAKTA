@@ -1,0 +1,13 @@
+@import '../../styles/settings.scss';
+
+.link{
+    color: $color-dark;
+    font-size:( $base-size * 2);
+    text-decoration: none;
+    &:hover{
+        color: $color-success;
+    }
+    &:active{
+        color: $color-warning;
+    }
+}

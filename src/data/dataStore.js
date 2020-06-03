@@ -102,6 +102,12 @@ const lists = [
     description: 'Interesting Games I want to check out!',
     image: 'https://i.postimg.cc/0QBsH38W/Background-18.png',
   },
+  {
+    id: 'list-4',
+    title: 'Traveling',
+    description: 'An interesting Destinations to check out!',
+    image: 'https://i.postimg.cc/0QBsH38W/Background-18.png',
+  },
 
 ];
 
@@ -127,39 +133,45 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-4',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'Europe',
+    icon: 'map',
   },
 ];
 
 const cards = [
   {
     id: 'card-1',
+    ListId: 'list-1',
     columnId: 'column-1',
     title: 'This Is Going to Hurt',
   },
   {
     id: 'card-2',
+    listId: 'list-1',
     columnId: 'column-1',
     title: 'Interpreter of Maladies',
   },
   {
     id: 'card-3',
+    listId: 'list-2',
     columnId: 'column-2',
-    title: '101 Dalatynian',
+    title: '101 Dalaty',
   },
   {
     id: 'card-4',
+    listId: 'list-2',
     columnId: 'column-2',
     title: 'Star Wars',
   },
   {
     id: 'card-5',
+    listId: 'list-3',
     columnId: 'column-3',
     title: 'The Witcher',
   },
   {
     id: 'card-6',
+    listId: 'list-3',
     columnId: 'column-3',
     title: 'Skyrim',
   },
