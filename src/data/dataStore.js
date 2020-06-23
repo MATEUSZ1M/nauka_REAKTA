@@ -10,6 +10,10 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  header: {
+    icon: 'bug',
+  },
+
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -27,6 +31,11 @@ export const faqData = {
 
 export const infoData = {
   title: 'Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
+export const search = {
+  title: 'Search results:',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 

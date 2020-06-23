@@ -14,7 +14,7 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
-    history: PropTypes.node,
+    history: PropTypes.object,
   };
 
   static defaultProps = {
@@ -25,6 +25,12 @@ class Search extends React.Component {
     value: this.props.searchString,
   };
 
+  handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      this.handleOK();
+    }
+  }
+
   handleChange(event) {
     this.setState({
       value: event.target.value,
@@ -33,7 +39,7 @@ class Search extends React.Component {
   }
 
   handleOK() {
-    // this.props.changeSearchString(this.state.value);
+    this.props.changeSearchString(this.state.value);
     this.props.history.push(`/search/${this.state.value}`);
   }
 
@@ -48,7 +54,6 @@ class Search extends React.Component {
     const { value } = this.state;
     const { icon } = settings.search;
     return (
-      //to do
       <section>
         <Container>
           <div className={styles.component}>
@@ -57,6 +62,7 @@ class Search extends React.Component {
               placeholder={text}
               value={value}
               onChange={(event) => this.handleChange(event)}
+              onKeyDown={this.handleKeyDown}
             />
             <div className={styles.buttons}>
               <Button onClick={() => this.handleOK()}>
